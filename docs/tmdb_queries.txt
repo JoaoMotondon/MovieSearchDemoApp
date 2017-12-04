@@ -1,0 +1,102 @@
+/genre/movie/list
+Get the list of movie genres.
+
+/genre/id/movies
+Get the list of movies for a particular genre by id. By default, only movies with 10 or more votes are included.
+
+
+xxxxxxxxxxxxxxxxx
+
+
+/discover/movie
+Discover movies by different types of data like average rating, number of votes, genres and certifications. You can get a valid list of certifications from the /certifications method.
+  ---- can include sort_by="criteria", where criteria can be: popularity.asc, popularity.desc, vote_average.asc, etc
+
+/movie/id/similar
+Get the similar movies for a specific movie id.
+
+/movie/id/videos
+Get the videos (trailers, teasers, clips, etc...) for a specific movie id.
+
+/movie/id/reviews
+Get the reviews for a particular movie id.
+
+/movie/now_playing
+Get the list of movies playing that have been, or are being released this week. This list refreshes every day.
+
+/movie/popular
+Get the list of popular movies on The Movie Database. This list refreshes every day.
+
+/movie/top_rated
+Get the list of top rated movies. By default, this list will only include movies that have 50 or more votes. This list refreshes every day.
+
+/movie/upcoming
+Get the list of upcoming movies by release date. This list refreshes every day.
+
+/search/movie
+Search for movies by title.
+
+
+xxxxxxxxxxxxxxxxxxxxxxxx
+
+
+/search/person
+Search for people by name.
+
+/person/id/movie_credits
+Get the movie credits for a specific person id.
+
+/person/popular
+Get the list of popular people on The Movie Database. This list refreshes every day.
+
+
+xxxxxxxxxxxxxxxxxxxxxxxx
+
+
+/search/tv
+Get specific TV series
+
+/tv/id/similar
+Get the similar TV shows for a specific tv id.
+
+/tv/id/videos
+Get the videos that have been added to a TV series (trailers, opening credits, etc...)
+
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxx
+List all movies ()
+http://api.themoviedb.org/3/discover/movie?api_key=ef68bfed72780ce7ae801b9daba23069
+
+List all movies sorted by popularity
+http://api.themoviedb.org/3/discover/movie?api_key=ef68bfed72780ce7ae801b9daba23069&sort_by=popularity.desc
+http://api.themoviedb.org/3/movie/popular?api_key=ef68bfed72780ce7ae801b9daba23069
+
+List all movies sorted by rate
+http://api.themoviedb.org/3/discover/movie?api_key=ef68bfed72780ce7ae801b9daba23069&sort_by=vote_average.desc
+http://api.themoviedb.org/3/movie/top_rated?api_key=ef68bfed72780ce7ae801b9daba23069
+
+List all upcoming movies 
+http://api.themoviedb.org/3/movie/upcoming?api_key=ef68bfed72780ce7ae801b9daba23069
+
+
+List all specific movie genre (for this example, 35 means comedy)
+http://api.themoviedb.org/3/genre/35/movies?api_key=ef68bfed72780ce7ae801b9daba23069
+
+List all movies for an specific genre (for this example, 28 means action)
+http://api.themoviedb.org/3/discover/movie?api_key=ef68bfed72780ce7ae801b9daba23069&with_genres=28
+
+List all movies for an specific genre (for this example, 99 means action) ORDERED BY RATE
+http://api.themoviedb.org/3/discover/movie?api_key=ef68bfed72780ce7ae801b9daba23069&with_genres=28&sort_by=vote_average.desc
+
+List all movies for an specific genre (for this example, 99 means documentary) ORDERED BY POPULARITY
+http://api.themoviedb.org/3/discover/movie?api_key=ef68bfed72780ce7ae801b9daba23069&with_genres=99&sort_by=popularity.desc
+
+List all movies genres:
+http://api.themoviedb.org/3/genre/movie/list?api_key=ef68bfed72780ce7ae801b9daba23069
+
+List all movies (and series) for an actor, given its id:
+http://api.themoviedb.org/3/person/4491/combined_credits?api_key=ef68bfed72780ce7ae801b9daba23069
+
+

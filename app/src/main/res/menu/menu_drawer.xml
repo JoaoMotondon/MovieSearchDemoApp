@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item android:title="Type">
+            <menu>
+                <item
+                    android:id="@+id/nav_movies_fragment"
+                    android:title="      Movies" />
+
+                <item
+                    android:id="@+id/nav_series_fragment"
+                    android:title="     Series" />
+
+                <item
+                    android:id="@+id/nav_people_fragment"
+                    android:title="      People" />
+            </menu>
+        </item>
+    </group>
+
+    <group
+        android:id="@+id/nav_genre_group"
+        android:checkableBehavior="single">
+        <item android:title="Genres">
+            <menu>
+                <item
+                    android:id="@+id/nav_comedy_fragment"
+                    android:title="      Comedy" />
+
+                <item
+                    android:id="@+id/nav_adventure_fragment"
+                    android:title="      Adventure" />
+
+                <item
+                    android:id="@+id/nav_action_fragment"
+                    android:title="      Action" />
+
+                <item
+                    android:id="@+id/nav_documentary_fragment"
+                    android:title="      Documentary" />
+            </menu>
+        </item>
+    </group>
+</menu>
